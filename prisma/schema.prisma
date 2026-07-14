@@ -15,5 +15,5 @@ datasource db {
 model test{
   id String@id
   title String
-  desc S
+  desc String
 }
