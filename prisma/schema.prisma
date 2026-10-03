@@ -12,8 +12,13 @@ datasource db {
   provider = "postgresql"
 }
 
-model test{
-  id String@id
-  title String
-  desc String
+model User {
+  id String @id @default(uuid())
+  clerkId String @unique
+  email String? @unique
+  firstName String?
+  lastName String?
+  imageUrl String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
